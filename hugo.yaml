@@ -1,0 +1,102 @@
+baseURL: "https://crazybarista.github.io/"
+title: CrazyBarista
+theme: PaperMod
+locale: zh-cn
+defaultContentLanguage: zh-cn
+hasCJKLanguage: true
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  code:
+    block:
+      lineNos: false
+      style: monokai
+      tabWidth: 4
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+
+params:
+  env: production
+  description: "CrazyBarista 的技术博客 — 记录代码与咖啡"
+  author: CrazyBarista
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  hidemeta: false
+  hideSummary: false
+
+  profile:
+    homepage: /
+    mode: home
+    avatarWidth: 128
+
+  label:
+    text: CrazyBarista
+    iconHeight: 35
+
+  homeInfoParams:
+    Title: "Hi, 我是 CrazyBarista"
+    Content: "这里是我的技术博客，记录编程、工具与思考。"
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/CrazyBarista"
+
+  fuseOpts: |
+    isCaseSensitive: false
+    shouldSort: true
+    minMatchCharLength: 1
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 30
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 40
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 50
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 60
+
+frontmatter:
+  lastmod: ["lastmod", ":fileModTime", ":default"]
